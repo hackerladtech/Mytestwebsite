@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Misty Canopy Forest Resort — A luxury eco-sanctuary nestled in the foggy high-ranges, tea estates, and cascading waterfalls of Idukki, Kerala."/>
+<meta name="theme-color" content="#050806"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/design-system.css"/>
+<link rel="manifest" href="manifest.json"/>
+<title>Misty Canopy Forest Resort — High-Range Sanctuary, Idukki</title>
+</head>
+<body data-page="home">
+
+<!-- ===== HERO (Ken Burns crossfade + background video + live mist + blur-text + liquid glass) ===== -->
+<section class="hero-home" data-hero style="position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden">
+  <!-- Editable Media Background: Change data-video for background video, data-frames for fallback image transitions -->
+  <div class="media-bg" data-video="videos/hero_bg.mp4" data-frames="assets/hero_bg.jpg,assets/gallery_mist.jpg,assets/gallery_tea_estate.jpg,assets/gallery_campfire.jpg"></div>
+  <div class="media-shade"></div>
+  <div class="media-vignette"></div>
+  <div class="media-shimmer"></div>
+
+  <!-- Interactive 3D Floating Mist/Fog Layers -->
+  <div class="fog-atmosphere">
+    <div class="fog-layer fog-layer-1"></div>
+    <div class="fog-layer fog-layer-2"></div>
+    <div class="fog-layer fog-layer-3"></div>
+  </div>
+
+  <div class="particles"></div>
+
+  <div style="position:relative;z-index:3;padding:0 1.5rem;max-width:1000px">
+    <div class="reveal" style="display:inline-flex;align-items:center;gap:.6rem;padding:.5rem .8rem;border-radius:9999px;margin-bottom:1.6rem">
+      <span class="liquid-glass" style="display:inline-flex;align-items:center;gap:.6rem;padding:.5rem .9rem;border-radius:9999px">
+        <span style="background:var(--gold);color:#121c15;border-radius:7px;font-size:.78rem;font-weight:600;padding:.1rem .5rem">Sanctuary</span>
+        <span style="font-size:.85rem;font-weight:500;color:rgba(255,255,255,.85)">The Highlands of Idukki, Western Ghats</span>
+      </span>
+    </div>
+
+    <!-- Blur Text Stagger -->
+    <h1 class="hero-giant giant" data-blur-text style="display:flex;flex-wrap:wrap;justify-content:center;margin-bottom:1.5rem">
+      <span data-seg="">Wrapped in</span>
+      <span data-seg="serif" style="color:var(--gold)">Mist,</span>
+      <span data-seg="">Crowned by</span>
+      <span data-seg="serif" style="color:var(--gold-2)">Forest</span>
+    </h1>
+
+    <p class="lead reveal" data-delay="350" style="max-width:620px;margin:0 auto 2.5rem;color:rgba(255,255,255,.85);font-weight:300">
+      Experience an ultra-premium, eco-luxury retreat in Idukki. Surrounded by cascading waterfalls, foggy tea valleys, and private forest canopy trails.
+    </p>
+
+    <div class="reveal" data-delay="450" style="display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap">
+      <a href="booking.html" class="btn-primary" data-magnetic>Inquire Stay ✦</a>
+      <a href="#intro" class="btn-pill" style="border:1px solid rgba(255,255,255,.15);color:#fff">Explore Retreat</a>
+    </div>
+  </div>
+
+  <!-- Smooth bottom page scroll indicator -->
+  <a href="#intro" class="hero-scroll" aria-label="Scroll down">
+    <span class="mouse"><span class="wheel"></span></span>
+  </a>
+</section>
+
+<!-- ===== INTRO SECTION (scroll-driven word reveal) ===== -->
+<section id="intro" class="section" style="padding-top:6rem;background:var(--bg);position:relative;overflow:hidden">
+  <!-- Interactive Floating Mist Overlay -->
+  <div class="fog-atmosphere" style="opacity: 0.12;">
+    <div class="fog-layer fog-layer-1" style="animation-duration: 75s;"></div>
+    <div class="fog-layer fog-layer-3" style="animation-duration: 125s;"></div>
+  </div>
+
+  <div class="container">
+    <div style="max-width:880px;margin:0 auto;text-align:center">
+      <p class="eyebrow reveal" style="margin-bottom:1.5rem">The Highlands Essence</p>
+      <!-- word color scroll reveal (data-sr-words) -->
+      <h2 class="section-giant" data-sr-words style="line-height:1.45;margin-bottom:3rem">
+        At Misty Canopy, luxury does not compete with the wilderness — it surrenders to it. Wake to tea-leaf fragrance, trek secret mountain waterfalls, and gather around a crackling campfire under the starry, foggy skies.
+      </h2>
+      <a href="story.html" class="btn-pill reveal" data-magnetic>Discover Our Philosophy</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UNIQUE DOUBLE-DOOR SPLIT GALLERY ===== -->
+<section class="section" style="background:var(--bg-2);position:relative">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 3rem">
+      <p class="eyebrow reveal">Interactive Showcase</p>
+      <h2 class="h-title reveal" data-delay="80">The Gates of <em>Sanctuary</em></h2>
+      <p class="reveal" data-delay="160" style="color:var(--muted);font-weight:300">
+        Tap the doors below to unfold the mystical elements of Idukki. Each click swings open the wooden sanctuary gates, revealing another hidden perspective of our ecosystem.
+      </p>
+    </div>
+
+    <!-- Double Door Split Component. Edit dataset images and captions to change the sliding slideshow. -->
+    <div class="door-container reveal-scale" 
+         data-images="assets/gallery_mist.jpg,assets/gallery_waterfall.jpg,assets/gallery_tea_estate.jpg,assets/gallery_campfire.jpg"
+         data-captions="Chasing the fog rolling over Munnar peaks, Rushing waters of our private forest waterfall, Endless green geometries of our organic tea gardens, Warming sparks of our signature valley campfire">
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES GRID (3D Tilt / Staggered reveals) ===== -->
+<section class="section" style="background:var(--bg);position:relative">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;flex-wrap:wrap;gap:2rem">
+      <div>
+        <p class="eyebrow reveal">High-Range Luxury</p>
+        <h2 class="h-title reveal" data-delay="80">Crafted for the <em>Extraordinary</em></h2>
+      </div>
+      <p class="reveal" data-delay="160" style="max-width:380px;color:var(--muted);font-weight:300;font-size:.95rem">
+        A hand-picked collection of natural experiences and architectural wonders designed to reconnect you with the earth.
+      </p>
+    </div>
+
+    <div class="grid grid-4" data-stagger>
+      <div class="feat-card" data-tilt>
+        <div class="fhead"><div class="ficon">⛰️</div><span class="num">01</span></div>
+        <h3>Misty Mountain Views</h3>
+        <p>Watch the thick forest fog lazily crawl over the high-altitude peaks of Idukki directly from your private glass-walled observation deck.</p>
+      </div>
+      <div class="feat-card" data-tilt>
+        <div class="fhead"><div class="ficon">💦</div><span class="num">02</span></div>
+        <h3>Jungle Waterfalls</h3>
+        <p>A secluded, mossy pathway winds from the resort cabins directly to a pristine, roaring waterfall tucked deep inside our private forest reserve.</p>
+      </div>
+      <div class="feat-card" data-tilt>
+        <div class="fhead"><div class="ficon">🍃</div><span class="num">03</span></div>
+        <h3>Tea Estate Walks</h3>
+        <p>Wander through acres of rolling tea fields and ancient cardamom gardens, ending with a private leaf-plucking session and masterclass.</p>
+      </div>
+      <div class="feat-card" data-tilt>
+        <div class="fhead"><div class="ficon">🔥</div><span class="num">04</span></div>
+        <h3>Campfire Nights</h3>
+        <p>As temperature drops, gather around custom stone campfires for tribal acoustic melodies, warm barbecues, and hot spiced tea.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SIGNATURE SUITES (Scroll Zoom / Cinematic) ===== -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 4rem">
+      <p class="eyebrow reveal">Private Sanctuaries</p>
+      <h2 class="h-title reveal" data-delay="80">Our Signature <em>Cabins</em></h2>
+      <p class="reveal" data-delay="160" style="color:var(--muted);font-weight:300">
+        Six private architectural dwellings crafted from native timber and locally sourced stone, floating above the forest floor.
+      </p>
+    </div>
+
+    <!-- Villa Showcase Item 1: Canopy Treehouse -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:7rem" class="home-split">
+      <!-- Scroll Zoom Container (Zoom like a video) -->
+      <div class="zoom-scroll-box reveal-scale" style="height:460px">
+        <img class="zoom-scroll-img" src="assets/room_jungle_villa.jpg" alt="Canopy Treehouse Suite" />
+      </div>
+      <div>
+        <p class="eyebrow reveal">Elevated Living</p>
+        <h2 class="h-title reveal" data-delay="80" style="font-size:2.5rem">The Canopy <em>Treehouse</em></h2>
+        <p class="lead reveal" data-delay="160" style="margin-bottom:2rem">
+          Perched fifteen meters above the jungle ground on massive banyan supports, featuring panoramic views of the waterfall ravine and mist valleys.
+        </p>
+        <div style="display:flex;gap:2rem" class="reveal" data-delay="240">
+          <div><h4 style="font-family:var(--font-display);font-size:1.5rem">95 m²</h4><span style="font-size:.8rem;color:var(--muted)">Elevated Sanctuary</span></div>
+          <div style="border-left:1px solid var(--border);padding-left:2rem"><h4 style="font-family:var(--font-display);font-size:1.5rem">360°</h4><span style="font-size:.8rem;color:var(--muted)">Forest Panoramic</span></div>
+        </div>
+        <a href="rooms.html" class="btn-primary reveal" data-delay="320" data-magnetic style="margin-top:2.5rem">View Villa Details</a>
+      </div>
+    </div>
+
+    <!-- Villa Showcase Item 2: Mist Glass Villa -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center" class="home-split">
+      <div class="order-mobile">
+        <p class="eyebrow reveal">Seamless Nature</p>
+        <h2 class="h-title reveal" data-delay="80" style="font-size:2.5rem">Mist Valley <em>Glass Villa</em></h2>
+        <p class="lead reveal" data-delay="160" style="margin-bottom:2rem">
+          Constructed with architectural smart-glass walls that mist-fog for privacy, nested inside the absolute heart of rolling tea estate gardens.
+        </p>
+        <div style="display:flex;gap:2rem" class="reveal" data-delay="240">
+          <div><h4 style="font-family:var(--font-display);font-size:1.5rem">120 m²</h4><span style="font-size:.8rem;color:var(--muted)">Glass Living Area</span></div>
+          <div style="border-left:1px solid var(--border);padding-left:2rem"><h4 style="font-family:var(--font-display);font-size:1.5rem">Private</h4><span style="font-size:.8rem;color:var(--muted)">Tea Tasting Deck</span></div>
+        </div>
+        <a href="rooms.html" class="btn-primary reveal" data-delay="320" data-magnetic style="margin-top:2.5rem">View Villa Details</a>
+      </div>
+      <!-- Scroll Zoom Container (Zoom like a video) -->
+      <div class="zoom-scroll-box reveal-scale" style="height:460px">
+        <img class="zoom-scroll-img" src="assets/room_cliffside.jpg" alt="Mist Valley Glass Villa" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section" style="position:relative;overflow:hidden;text-align:center;padding:8rem 0">
+  <!-- Editable Media Background: Change data-video for background video, data-frames for fallback image transitions -->
+  <div class="media-bg" data-video="videos/cta_bg.mp4" data-frames="assets/gallery_campfire.jpg"></div>
+  <div class="media-shade"></div>
+  <div class="media-vignette"></div>
+
+  <!-- Interactive Floating Mist Overlay -->
+  <div class="fog-atmosphere" style="opacity: 0.22;">
+    <div class="fog-layer fog-layer-1"></div>
+    <div class="fog-layer fog-layer-2" style="animation-duration: 80s;"></div>
+  </div>
+
+  <div class="container" style="position:relative;z-index:3">
+    <h2 class="section-giant giant reveal-scale" style="margin-bottom:1.5rem">The Highlands<br>Await</h2>
+    <p class="lead reveal" data-delay="100" style="max-width:500px;margin:0 auto 2.5rem;color:rgba(255,255,255,.85)">
+      Secure your misty escape to the peak forest of Idukki today. Your private fireplace is lit.
+    </p>
+    <a href="booking.html" class="btn-primary reveal" data-delay="200" data-magnetic>Reserve Your Escape ✦</a>
+  </div>
+</section>
+
+<style>
+@media(max-width:900px){
+  .home-split{grid-template-columns:1fr!important;gap:2rem!important}
+  .order-mobile{order:2}
+}
+</style>
+<script src="js/chrome.js"></script>
+<script src="js/app.js"></script>
+<script>if('serviceWorker'in navigator){addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}</script>
+</body>
+</html>

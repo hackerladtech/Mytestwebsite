@@ -1,0 +1,18 @@
+{
+  "name": "Misty Canopy Forest Resort",
+  "short_name": "Misty Canopy",
+  "description": "Wrapped in Mist, Crowned by Forest - An eco-luxury high-range sanctuary in Idukki, Kerala.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#050806",
+  "theme_color": "#050806",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Crect width='512' height='512' fill='%23050806' rx='80'/%3E%3Ctext x='256' y='320' font-family='serif' font-size='200' fill='%23d1b473' text-anchor='middle'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

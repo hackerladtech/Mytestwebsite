@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Immerse yourself in the visual journey of Misty Canopy Forest Resort in Idukki, Kerala. Gallery of misty peaks, forest waterfalls, tea estates, and campfire warmth."/>
+<meta name="theme-color" content="#050806"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/design-system.css"/>
+<link rel="manifest" href="manifest.json"/>
+<title>Visual Gallery — Misty Canopy Forest Resort</title>
+<style>
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:1.2rem}
+@media(max-width:1024px){.gal{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.gal{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.gal{grid-template-columns:1fr}}
+.gitem{position:relative;border-radius:var(--radius-sm);overflow:hidden;cursor:pointer;border:1px solid var(--border)}
+.gtall{grid-row:span 2}.gwide{grid-column:span 2}
+@media(max-width:480px){.gtall,.gwide{grid-row:span 1;grid-column:span 1}}
+.gitem .img{width:100%;height:100%;background-size:cover;background-position:center;transition:transform 1s var(--ease-cinematic);animation:kenBurns 22s ease-in-out infinite alternate}
+.gitem:hover .img{transform:scale(1.1);animation-play-state:paused}
+.gitem .zoom{position:absolute;inset:0;display:grid;place-items:center;font-size:1.5rem;color:#fff;opacity:0;transition:.4s ease;background:rgba(10,15,11,0.55);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.gitem:hover .zoom{opacity:1}
+</style>
+</head>
+<body data-page="gallery">
+
+<!-- ===== PAGE HERO — Background Video + Live Fog ===== -->
+<section class="page-hero" data-hero>
+  <div class="media-bg" data-video="videos/gallery_bg.mp4" data-frames="assets/room_cliffside.jpg,assets/gallery_mist.jpg"></div>
+  <div class="media-shade"></div>
+  <div class="media-vignette"></div>
+
+  <div class="fog-atmosphere">
+    <div class="fog-layer fog-layer-1"></div>
+    <div class="fog-layer fog-layer-3"></div>
+  </div>
+
+  <div class="container">
+    <p class="eyebrow">Visual Sanctuary</p>
+    <h1 class="hero-giant giant" data-blur-text style="display:flex;flex-wrap:wrap"><span data-seg="">The</span> <span data-seg="serif" style="color:var(--gold)">Gallery</span></h1>
+    <p class="reveal" data-delay="160" style="max-width:520px;color:rgba(255,255,255,.85);font-weight:300;font-size:1.1rem;margin-top:1rem">
+      Moments captured in light, mist, and deep forest green. Click any frame to enlarge. Tap the sanctuary gates slider below to experience door transitions.
+    </p>
+  </div>
+</section>
+
+<!-- ===== SIGNATURE DOUBLE-DOOR SPLIT GALLERY (TAP TO OPEN NEXT PHOTO) ===== -->
+<section class="section" style="background:var(--bg);position:relative">
+  <!-- Live Mist Overlay -->
+  <div class="fog-atmosphere" style="opacity: 0.12;">
+    <div class="fog-layer fog-layer-1"></div>
+    <div class="fog-layer fog-layer-2" style="animation-duration: 100s;"></div>
+  </div>
+
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 3rem">
+      <p class="eyebrow reveal">Interactive Showcase</p>
+      <h2 class="h-title reveal" data-delay="80">Doors of <em>Perception</em></h2>
+      <p class="reveal" data-delay="160" style="color:var(--muted);font-weight:300">
+        Click to swing open the solid timber forest gates, unveiling a stunning series of Idukki's beautiful misty and tea garden landscapes.
+      </p>
+    </div>
+
+    <!-- Magic Door Container. Simply edit dataset images and captions to customize! -->
+    <div class="door-container reveal-scale" 
+         data-images="assets/gallery_mist.jpg,assets/gallery_waterfall.jpg,assets/gallery_tea_estate.jpg,assets/gallery_campfire.jpg,assets/gallery_treehouse.jpg,assets/gallery_glass_villa.jpg"
+         data-captions="Mist rolling over high-altitude Western Ghats ridges, Cascade rapids of our secret jungle waterfalls, Organic green textures of the tea valleys, Sparks from our cozy campfire crackling in the cold forest woods, Elevated living in the Canopy Treehouse Suite, Mist Valley Glass Villa floating in cardamoms">
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY PHOTO GRID (16 Descriptive Slots) ===== -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 3.5rem">
+      <p class="eyebrow reveal">The Collection</p>
+      <h2 class="h-title reveal" data-delay="80">Captured <em>Moments</em></h2>
+      <p class="reveal" data-delay="160" style="color:var(--muted);font-weight:300">
+        Our curated catalog of 16 signature views. You can easily replace these image files in your assets folder with matching names to update.
+      </p>
+    </div>
+
+    <div class="gal">
+      <!-- Slot 1: Mist Valley (Large Vertical) -->
+      <div class="gitem gtall reveal-scale" data-lightbox data-parallax="0.04">
+        <!-- Photo Reference: assets/gallery_mist.jpg -->
+        <div class="img" style="background-image:url('assets/gallery_mist.jpg')"></div>
+        <div class="zoom">✦ View Valley Mist</div>
+      </div>
+
+      <!-- Slot 2: Waterfall Rapids -->
+      <div class="gitem reveal-scale" data-delay="80" data-lightbox>
+        <!-- Photo Reference: assets/gallery_waterfall.jpg -->
+        <div class="img" style="background-image:url('assets/gallery_waterfall.jpg')"></div>
+        <div class="zoom">✦ View Waterfall</div>
+      </div>
+
+      <!-- Slot 3: Campfire Evening -->
+      <div class="gitem reveal-scale" data-delay="160" data-lightbox>
+        <!-- Photo Reference: assets/gallery_campfire.jpg -->
+        <div class="img" style="background-image:url('assets/gallery_campfire.jpg')"></div>
+        <div class="zoom">✦ View Campfire</div>
+      </div>
+
+      <!-- Slot 4: Tea Estates (Wide) -->
+      <div class="gitem gwide reveal-scale" data-delay="240" data-lightbox>
+        <!-- Photo Reference: assets/gallery_tea_estate.jpg -->
+        <div class="img" style="background-image:url('assets/gallery_tea_estate.jpg')"></div>
+        <div class="zoom">✦ View Tea Estates</div>
+      </div>
+
+      <!-- Slot 5: Forest Trekking -->
+      <div class="gitem reveal-scale" data-delay="320" data-lightbox>
+        <!-- Photo Reference: assets/gallery_trek.jpg -->
+        <div class="img" style="background-image:url('assets/room_garden.jpg')"></div>
+        <div class="zoom">✦ View Forest Trek</div>
+      </div>
+
+      <!-- Slot 6: Canopy Treehouse (Large Vertical) -->
+      <div class="gitem gtall reveal-scale" data-delay="400" data-lightbox>
+        <!-- Photo Reference: assets/gallery_treehouse.jpg -->
+        <div class="img" style="background-image:url('assets/room_jungle_villa.jpg')"></div>
+        <div class="zoom">✦ View Treehouse Suite</div>
+      </div>
+
+      <!-- Slot 7: Glass Villa Exterior -->
+      <div class="gitem reveal-scale" data-delay="480" data-lightbox>
+        <!-- Photo Reference: assets/gallery_glass_villa.jpg -->
+        <div class="img" style="background-image:url('assets/room_cliffside.jpg')"></div>
+        <div class="zoom">✦ View Glass Villa</div>
+      </div>
+
+      <!-- Slot 8: Jeep Safari Sunrise (Wide) -->
+      <div class="gitem gwide reveal-scale" data-delay="560" data-lightbox>
+        <!-- Photo Reference: assets/gallery_sunrise.jpg -->
+        <div class="img" style="background-image:url('assets/gallery_drone.jpg')"></div>
+        <div class="zoom">✦ View Mountain Sunrise</div>
+      </div>
+
+      <!-- Slot 9: Reservoir Boating -->
+      <div class="gitem reveal-scale" data-delay="120" data-lightbox>
+        <!-- Photo Reference: assets/gallery_lake.jpg -->
+        <div class="img" style="background-image:url('assets/dining_beach.jpg')"></div>
+        <div class="zoom">✦ View Lake Reservoir</div>
+      </div>
+
+      <!-- Slot 10: Wild Elephants -->
+      <div class="gitem reveal-scale" data-delay="200" data-lightbox>
+        <!-- Photo Reference: assets/gallery_elephant.jpg -->
+        <div class="img" style="background-image:url('assets/room_ocean_suite.jpg')"></div>
+        <div class="zoom">✦ View Wild Elephants</div>
+      </div>
+
+      <!-- Slot 11: Spa Treatment -->
+      <div class="gitem reveal-scale" data-delay="280" data-lightbox>
+        <!-- Photo Reference: assets/gallery_spa.jpg -->
+        <div class="img" style="background-image:url('assets/dining_fine.jpg')"></div>
+        <div class="zoom">✦ View Wellness Spa</div>
+      </div>
+
+      <!-- Slot 12: Private Dining -->
+      <div class="gitem reveal-scale" data-delay="360" data-lightbox>
+        <!-- Photo Reference: assets/gallery_dining.jpg -->
+        <div class="img" style="background-image:url('assets/dining_skybar.jpg')"></div>
+        <div class="zoom">✦ View Canopy Dining</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 360 / VIRTUAL TOUR CTA (mask reveal) ===== -->
+<section class="section" style="background:var(--bg)">
+  <div class="container">
+    <div class="mask-reveal" data-mask-reveal style="position:relative;height:54vh;border-radius:var(--radius);overflow:hidden;background:url('assets/gallery_drone.jpg') center/cover">
+      <div style="position:absolute;inset:0;background:rgba(5,8,6,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1.2rem;z-index: 3">
+        <div class="liquid-glass" style="width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font-size:1.8rem;color: var(--gold)">▶</div>
+        <h3 style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem)">360° Virtual Forest Tour</h3>
+        <p style="color:rgba(255,255,255,.85);font-weight:300;max-width:440px">Step inside the Misty Canopy before you arrive. Wander through the treehouses, tea gardens, and waterfalls in immersive 360° virtual reality.</p>
+        <a href="booking.html" class="btn-primary" data-magnetic>Start Virtual Tour</a>
+      </div>
+      <!-- Floating Mist layer in Virtual Tour card -->
+      <div class="fog-atmosphere" style="opacity: 0.18; z-index: 2">
+        <div class="fog-layer fog-layer-1"></div>
+        <div class="fog-layer fog-layer-3"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="js/chrome.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

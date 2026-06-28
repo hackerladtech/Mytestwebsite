@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Discover the story, ecological philosophy, and heritage of Misty Canopy Forest Resort in Idukki, Kerala."/>
+<meta name="theme-color" content="#050806"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/design-system.css"/>
+<link rel="manifest" href="manifest.json"/>
+<title>Our Story — Misty Canopy Forest Resort</title>
+</head>
+<body data-page="story">
+
+<!-- ===== PAGE HERO — Background Video + Live Fog ===== -->
+<section class="page-hero" data-hero>
+  <div class="media-bg" data-video="videos/story_bg.mp4" data-frames="assets/amenity_spa.jpg,assets/room_jungle_villa.jpg"></div>
+  <div class="media-shade"></div>
+  <div class="media-vignette"></div>
+
+  <div class="fog-atmosphere">
+    <div class="fog-layer fog-layer-1"></div>
+    <div class="fog-layer fog-layer-3"></div>
+  </div>
+
+  <div class="container">
+    <p class="eyebrow reveal">Our Heritage</p>
+    <h1 class="hero-giant giant" data-blur-text style="display:flex;flex-wrap:wrap"><span data-seg="">The Misty</span> <span data-seg="serif" style="color:var(--gold)">Story</span></h1>
+    <p class="reveal" data-delay="160" style="max-width:540px;color:rgba(255,255,255,.85);font-weight:300;font-size:1.1rem;margin-top:1rem">
+      A premium high-range sanctuary born from a simple dream: to merge architectural genius with ecological preservation.
+    </p>
+  </div>
+</section>
+
+<!-- ===== PHILOSOPHY INTRO (scroll-driven word reveal) ===== -->
+<section class="section" style="background:var(--bg)">
+  <div class="container">
+    <div style="max-width:880px;margin:0 auto;text-align:center">
+      <p class="eyebrow reveal" style="margin-bottom:1.5rem">Rooted in Earth</p>
+      <h2 class="section-giant" data-sr-words style="line-height:1.45;margin-bottom:3rem">
+        We are Misty Canopy, a sanctuary of stillness. Twelve acres of untamed, high-altitude Western Ghats forest where the ancient wilderness was not cleared or tamed, but deeply honored and integrated.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STORY SPLIT SECTION ===== -->
+<section class="section" style="background:var(--bg-2);position:relative">
+  <!-- Live Mist Overlay -->
+  <div class="fog-atmosphere" style="opacity: 0.12;">
+    <div class="fog-layer fog-layer-1"></div>
+    <div class="fog-layer fog-layer-2" style="animation-duration: 100s;"></div>
+  </div>
+
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center" class="story-split">
+      <div class="reveal-scale" data-parallax="0.1" style="border-radius:var(--radius);overflow:hidden;height:520px;position:relative">
+        <div class="img" style="position:absolute;inset:0;background:url('assets/room_jungle_villa.jpg') center/cover;animation:kenBurns 22s ease-in-out infinite alternate"></div>
+      </div>
+      <div>
+        <p class="eyebrow reveal">More than a resort — a philosophy</p>
+        <h2 class="h-title reveal" data-delay="80" style="font-size:2.5rem;margin:1rem 0 2rem">Coexisting with the <em>Forest</em></h2>
+        <div class="reveal" data-delay="160" style="display:flex;flex-direction:column;gap:1.5rem;color:var(--muted);font-weight:300;line-height:1.7">
+          <p>
+            Misty Canopy was founded on a commitment to eco-luxury. Every single elevated treehouse support was raised without damaging a single ancient root or cutting a single timber branch.
+          </p>
+          <p>
+            Our glass chalets are 100% self-powered, utilizing silent solar grids and mountain-stream hydro-turbines. Water is harvested directly from pristine highland springs, micro-filtered, and returned pure to the ecosystem.
+          </p>
+          <p>
+            Our cardamom and organic tea fields are maintained by local tribal families, ensuring that the heritage of Idukki district is not just preserved, but shared with deep respect and mutual prosperity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIAL (scroll word reveal) ===== -->
+<section class="section" style="background:var(--bg);position:relative">
+  <div class="container">
+    <div class="testi">
+      <span class="quote-mark">“</span>
+      <p class="testi-text" data-sr-words>
+        The misty mornings at Misty Canopy are pure magic. Sitting on the Canopy Treehouse deck, watching the forest fog clear to reveal roaring waterfalls is a memory that will stay with us forever. Truly a masterpieces of ecological luxury.
+      </p>
+      <div class="testi-author">
+        <div class="av" style="background:linear-gradient(135deg,#d1b473,#edd8a1)"></div>
+        <div><strong>Marcus Bellini</strong><span>Anniversary Stay · Milan</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>@media(max-width:900px){.story-split{grid-template-columns:1fr!important;gap:2rem!important}.story-split>div:first-child{height:420px!important}}</style>
+<script src="js/chrome.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
